@@ -8,7 +8,8 @@ uLCD_4DGL uLCD(D1, D0, D2); // serial tx, serial rx, reset pin;
 int main()
 {
     // basic printf demo = 16 by 18 characters on screen
-    uLCD.background_color(0xFFFFFF);
+    uLCD.background_color(WHITE);
+    uLCD.textbackground_color(WHITE);
     uLCD.cls();
     uLCD.printf("\nHello uLCD World\n"); //Default Green on black text
     uLCD.printf("\n  Starting Demo...");
