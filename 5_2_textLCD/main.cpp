@@ -1,5 +1,5 @@
-#define example1
-#define example2
+//#define example1
+//#define example2
 #define example3
 
 #ifdef example1
@@ -27,15 +27,17 @@ TextLCD lcd(D2, D3, D4, D5, D6, D7);
 
 int main()
 {
-      int x = 0;
-      lcd.printf("Hello World!\n");
-      while(true)
+      int x = 30;
+      lcd.printf("ID = 108011244\n");
+      lcd.locate(0,1);
+      lcd.printf("countdown: ");
+      while(x >= 0)
       {
             led = !led;             // toggle led
-            lcd.locate(5,1);
-            lcd.printf("%5i",x);    //counter display
+            lcd.locate(11,1);
+            lcd.printf("%2i",x);    //counter display
             ThisThread::sleep_for(1s);
-            x++;
+            x--;
       }
 }
 #endif
